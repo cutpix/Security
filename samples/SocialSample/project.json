@@ -1,8 +1,9 @@
-﻿{
+{
     "webroot": "wwwroot",
     "version": "1.0.0-*",
 
     "dependencies": {
+        "Extensions.AspNet.Authentication.Instagram": "1.0.0-*",
         "Extensions.AspNet.Authentication.Vkontakte": "1.0.0-*",
         "Microsoft.AspNet.Authentication": "1.0.0-*",
         "Microsoft.AspNet.Authentication.Cookies": "1.0.0-*",
@@ -17,7 +18,6 @@
         "Microsoft.Framework.Configuration.Json": "1.0.0-*",
         "Microsoft.Framework.Logging": "1.0.0-*",
         "Microsoft.Framework.Logging.Console": "1.0.0-*",
-        "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-*",
         "System.Reflection": "4.0.0-*",
         "System.Reflection.Metadata": "1.0.21-*"
     },

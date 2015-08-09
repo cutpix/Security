@@ -1,15 +1,17 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Extensions.AspNet.Authentication.Instagram;
 using Extensions.AspNet.Authentication.Vkontakte;
+using Microsoft.AspNet.Authentication;
 using Microsoft.AspNet.Authentication.Cookies;
 using Microsoft.AspNet.Authentication.OAuth;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Http.Authentication;
+using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
-using Microsoft.Framework.Runtime;
 
 namespace SocialSample
 {
@@ -22,6 +24,11 @@ namespace SocialSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication();
+
+            services.Configure<SharedAuthenticationOptions>(options =>
+            {
+                options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -37,9 +44,15 @@ namespace SocialSample
 
             app.UseVkontakteAuthentication(options =>
             {
-                options.ClientId = "<insert your client id>";
-                options.ClientSecret = "<insert your client secret>";
-                options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.ClientId = "<insert client id>";
+                options.ClientSecret = "<insert client secret>";
+                options.SaveTokensAsClaims = true;
+            });
+
+            app.UseInstagramAuthentication(options =>
+            {
+                options.ClientId = "<insert client id>";
+                options.ClientSecret = "<insert client secret>";
                 options.SaveTokensAsClaims = true;
             });
 

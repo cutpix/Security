@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8AE75646-A
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Extensions.AspNet.Authentication.Test", "test\Extensions.AspNet.Authentication.Test\Extensions.AspNet.Authentication.Test.xproj", "{652466C2-2157-42BD-B0D4-D95F60875C21}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Extensions.AspNet.Authentication.Instagram", "src\Extensions.AspNet.Authentication.Instagram\Extensions.AspNet.Authentication.Instagram.xproj", "{7CB67924-C4E4-403C-A10F-E0129F97B5BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{652466C2-2157-42BD-B0D4-D95F60875C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{652466C2-2157-42BD-B0D4-D95F60875C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{652466C2-2157-42BD-B0D4-D95F60875C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB67924-C4E4-403C-A10F-E0129F97B5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB67924-C4E4-403C-A10F-E0129F97B5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB67924-C4E4-403C-A10F-E0129F97B5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB67924-C4E4-403C-A10F-E0129F97B5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7DE13ED0-4649-466F-88BC-DC1961D41042} = {10868F38-A46C-4A15-A7C1-C75CBDB42259}
 		{652466C2-2157-42BD-B0D4-D95F60875C21} = {8AE75646-ABA3-438C-939F-AD25105A742C}
+		{7CB67924-C4E4-403C-A10F-E0129F97B5BA} = {10868F38-A46C-4A15-A7C1-C75CBDB42259}
 	EndGlobalSection
 EndGlobal
