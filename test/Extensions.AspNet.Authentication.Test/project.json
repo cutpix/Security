@@ -1,0 +1,16 @@
+﻿{
+    "dependencies": {
+        "Extensions.AspNet.Authentication.Vkontakte": "1.0.0-*",
+        "Microsoft.AspNet.TestHost": "1.0.0-*",
+        "Moq": "4.2.1312.1622",
+        "xunit.runner.aspnet": "2.0.0-aspnet-*",
+    },
+
+    "commands": {
+        "test": "xunit.runner.aspnet"
+    },
+
+    "frameworks": {
+        "dnx451": { }
+    }
+}

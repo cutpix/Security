@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Extensions.AspNet.Authentication.Vkontakte", "src\Extensions.AspNet.Authentication.Vkontakte\Extensions.AspNet.Authentication.Vkontakte.xproj", "{7DE13ED0-4649-466F-88BC-DC1961D41042}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10868F38-A46C-4A15-A7C1-C75CBDB42259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26197206-B0CB-499B-92B1-2552E143F2A6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8AE75646-ABA3-438C-939F-AD25105A742C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Extensions.AspNet.Authentication.Test", "test\Extensions.AspNet.Authentication.Test\Extensions.AspNet.Authentication.Test.xproj", "{652466C2-2157-42BD-B0D4-D95F60875C21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE13ED0-4649-466F-88BC-DC1961D41042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE13ED0-4649-466F-88BC-DC1961D41042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE13ED0-4649-466F-88BC-DC1961D41042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE13ED0-4649-466F-88BC-DC1961D41042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{652466C2-2157-42BD-B0D4-D95F60875C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652466C2-2157-42BD-B0D4-D95F60875C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652466C2-2157-42BD-B0D4-D95F60875C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652466C2-2157-42BD-B0D4-D95F60875C21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DE13ED0-4649-466F-88BC-DC1961D41042} = {10868F38-A46C-4A15-A7C1-C75CBDB42259}
+		{652466C2-2157-42BD-B0D4-D95F60875C21} = {8AE75646-ABA3-438C-939F-AD25105A742C}
+	EndGlobalSection
+EndGlobal
