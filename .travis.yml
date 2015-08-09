@@ -1,0 +1,9 @@
+language: csharp
+mono:
+  - latest
+install:
+  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | sh && source ~/.dnx/dnvm/dnvm.sh && dnvm upgrade
+  - dnvm upgrade
+  - dnu restore
+script:
+  - dnx $TRAVIS_BUILD_DIR/test/Extensions.AspNet.Authentication.Test/project.json test -parallel none
