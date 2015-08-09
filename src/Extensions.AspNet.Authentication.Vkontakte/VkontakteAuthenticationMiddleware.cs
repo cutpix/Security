@@ -14,7 +14,7 @@ namespace Extensions.AspNet.Authentication.Vkontakte
                                                  IDataProtectionProvider dataProtectionProvider,
                                                  ILoggerFactory loggerFactory,
                                                  IUrlEncoder encoder,
-                                                 IOptions<ExternalAuthenticationOptions> externalOptions,
+                                                 IOptions<SharedAuthenticationOptions> externalOptions,
                                                  IOptions<VkontakteAuthenticationOptions> options,
                                                  ConfigureOptions<VkontakteAuthenticationOptions> configureOptions = null)
             : base(next, dataProtectionProvider, loggerFactory, encoder, externalOptions, options, configureOptions)
