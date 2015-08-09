@@ -1,7 +1,14 @@
 init:
   - git config --global core.autocrlf true
+
 build_script:
   - build.cmd
+
 artifacts:
-  - path: 'artifacts\build\**\*.nupkg'
+  - path: 'artifacts\build\*.nupkg'
     name: NuGet Packages
+
+branches:
+  only:
+    - master
+    - develop
