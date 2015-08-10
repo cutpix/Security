@@ -12,3 +12,6 @@ branches:
   only:
     - master
     - develop
+
+environment:
+  DNX_BUILD_VERSION: $(APPVEYOR_BUILD_NUMBER)

@@ -1,5 +1,5 @@
 ﻿{
-    "version": "1.0.0-*",
+    "version": "1.0.0-build-*",
     "description": "ASP.NET 5 middleware that enables an application to support Vkontakte's OAuth 2.0 authentication workflow",
     "authors": [ "Pavlenko Maksym" ],
 
