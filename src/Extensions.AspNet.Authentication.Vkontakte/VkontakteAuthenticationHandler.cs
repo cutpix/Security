@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Authentication;
 using Microsoft.AspNet.Authentication.OAuth;
 using Microsoft.AspNet.Http.Authentication;
 using Microsoft.AspNet.Http.Extensions;
@@ -55,6 +57,25 @@ namespace Extensions.AspNet.Authentication.Vkontakte
 
             var payload = JObject.Parse(json);
             return new OAuthTokenResponse(payload);
+        }
+
+        protected override async Task<AuthenticationTicket> CreateTicketAsync(ClaimsIdentity identity, AuthenticationProperties properties, OAuthTokenResponse tokens)
+        {
+            var notification = new OAuthAuthenticatedContext(Context, Options, Backchannel, tokens)
+            {
+                Properties = properties,
+                Principal = new ClaimsPrincipal(identity)
+            };
+
+            var userId = tokens.Response["user_id"]?.ToString();
+            if (userId != null)
+            {
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, userId, ClaimValueTypes.String, Options.ClaimsIssuer));
+            }
+
+            await Options.Notifications.Authenticated(notification);
+
+            return new AuthenticationTicket(notification.Principal, notification.Properties, notification.Options.AuthenticationScheme);
         }
 
         protected override string FormatScope()

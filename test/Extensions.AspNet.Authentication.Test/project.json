@@ -1,6 +1,6 @@
 ﻿{
     "dependencies": {
-        "Extensions.AspNet.Authentication.Vkontakte": "1.0.0-build*",
+        "Extensions.AspNet.Authentication.Vkontakte": "1.0.0-*",
         "Microsoft.AspNet.Authentication.Cookies": "1.0.0-*",
         "Microsoft.AspNet.TestHost": "1.0.0-*",
         "Microsoft.AspNet.DataProtection": "1.0.0-*",
